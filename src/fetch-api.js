@@ -9,5 +9,5 @@ export default function fetchCountries(name) {
       throw new Error(resp.status);
     }
     return resp.json()
-  }).catch(error => console.log(error));
+  }).catch();
 }
