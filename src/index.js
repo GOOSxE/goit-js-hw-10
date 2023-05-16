@@ -30,7 +30,11 @@ function onFormInput(event) {
       }
     })
     .catch(error => {
-      Notiflix.Notify.failure('Oops, there is no country with that name!');
+      if (error.message === '404') {
+        Notiflix.Notify.failure('Oops, there is no country with that name!');
+      } else {
+        Notiflix.Notify.failure(error.message)
+      }
     });
 }
 // ? // Функція яка повідомляє про завелику кількість співпадінь ;

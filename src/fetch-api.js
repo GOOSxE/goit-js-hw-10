@@ -8,6 +8,6 @@ export default function fetchCountries(name) {
     if (!resp.ok) {
       throw new Error(resp.status);
     }
-    return resp.json()
-  }).catch();
+    return resp.json();
+  });
 }
